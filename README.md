@@ -1,3 +1,23 @@
+# 啟動 github page 方式
+
+1.先在 github 建立儲存庫
+2.建立好之後複製 …or push an existing repository from the command line 裡面三段程式碼
+git remote add origin https://github.com/danlin2019/cra-sample.git
+git branch -M main
+git push -u origin main
+
+3.將東西push上去
+4.接下來需要在 package.json 加上   "homepage": "https://myusername.github.io/my-app",
+規則  "homepage": "https://你的git名稱.github.io/儲存庫"
+5. 安裝 npm install --save gh-pages
+6.在 "scripts": 裡加上
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+7 在分支那邊下拉 找到 gh-pages 點進去
+8.選擇右上角 Settings 找到右側的 Pages
+9.右側會顯示你的網址 Your site is live at https://danlin2019.github.io/cra-sample/ ，如果沒有顯示 請重整
+10.按下 visit site 即可到達你的 github page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
